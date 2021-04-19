@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '@services/user.service';
+
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: [ './signup.component.scss', '../../shared/style/login-register.scss' ]
+  styleUrls: [ './signup.component.scss', '../../../../shared/style/login-register.scss' ]
 })
 export class SignupComponent {
 
@@ -21,8 +22,10 @@ export class SignupComponent {
     cPassword: new FormControl(''),
   });
 
-  constructor(private readonly userService:UserService,
-    private readonly router:Router) {}
+  constructor(
+    private readonly authService: AuthService,
+    private readonly router:Router
+  ) {}
 
   submit():void {
 
@@ -52,7 +55,7 @@ export class SignupComponent {
 
     }
     this.loading = true;
-    this.userService.signUp(this.form.value).subscribe((message) => {
+    this.authService.signUp(this.form.value).subscribe((message) => {
 
       this.loading = false;
       this.router.navigateByUrl('/');

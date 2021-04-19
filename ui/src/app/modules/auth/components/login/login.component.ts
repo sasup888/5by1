@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '@services/user.service';
+
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: [ './login.component.scss', '../../shared/style/login-register.scss' ]
+  styleUrls: [ './login.component.scss', '../../../../shared/style/login-register.scss' ]
 })
 export class LoginComponent {
 
@@ -19,8 +20,10 @@ export class LoginComponent {
     password: new FormControl(''),
   });
 
-  constructor(private readonly userService:UserService,
-    private readonly router:Router) {}
+  constructor(
+    private readonly authService: AuthService,
+    private readonly router:Router
+  ) {}
 
   submit():void {
 
@@ -39,7 +42,7 @@ export class LoginComponent {
 
     this.loading = true;
     this.error = null;
-    this.userService.login(this.form.value).subscribe((message) => {
+    this.authService.login(this.form.value).subscribe((message) => {
 
       this.loading = false;
       this.router.navigateByUrl('/');

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ACCESS_TOKEN_ID } from '@shared/Constants';
 
@@ -7,14 +7,11 @@ import { ACCESS_TOKEN_ID } from '@shared/Constants';
   templateUrl: './home.component.html',
   styleUrls: [ './home.component.scss' ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   constructor(private router: Router) { }
 
-  ngOnInit():void {
-  }
-
-  logout = ():void => {
+  logout(): void {
 
     localStorage.removeItem(ACCESS_TOKEN_ID);
     this.router.navigate([ '/login' ]);
