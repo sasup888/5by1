@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
+import { Component } from '@angular/core';
+
+import { drawerConfigFactory } from './drawer.config';
 
 @Component({
   selector: 'app-drawer',
   templateUrl: './drawer.component.html',
   styleUrls: ['./drawer.component.scss']
 })
-export class DrawerComponent implements OnInit {
+export class DrawerComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  drawerConfig = drawerConfigFactory();
 
 }

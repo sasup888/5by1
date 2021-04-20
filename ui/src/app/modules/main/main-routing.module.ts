@@ -9,8 +9,17 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
+        path: '',
+        pathMatch: 'full',  
+        redirectTo: 'dashboard'
+      },
+      {
         path: 'dashboard',
         loadChildren: () => import('./modules/dashboard/dashboard.module').then(mod => mod.DashboardModule)
+      },
+      {
+        path: 'items',
+        loadChildren: () => import('./modules/items/items.module').then(mod => mod.ItemsModule)
       },
     ]
   },

@@ -1,5 +1,5 @@
 <mat-nav-list>
-  <mat-list-item> Pepper </mat-list-item>
-  <mat-list-item> Salt </mat-list-item>
-  <mat-list-item> Paprika </mat-list-item>
+  <a primary mat-list-item *ngFor="let configItem of drawerConfig" [routerLink]="configItem.path">
+    <mat-icon mat-list-icon aria-hidden="false" [ariaLabel]="configItem.label">{{configItem.icon}}</mat-icon> {{configItem.label}}
+  </a>
  </mat-nav-list>
