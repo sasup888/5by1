@@ -1,0 +1,15 @@
+<!-- <p class="home">Welcome To Home!. logout <u><a (click)="logout()">Here</a></u></p> -->
+
+<mat-drawer-container class="main-container">
+  <mat-drawer opened="true" #drawer class="sidenav" mode="side">
+    <app-drawer></app-drawer>
+  </mat-drawer>
+
+  <div class="main-content">
+    <router-outlet></router-outlet>
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container>
