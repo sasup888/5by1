@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { ACCESS_TOKEN_ID } from '@shared/Constants';
 
+import { MainService } from './services/main.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -9,11 +8,16 @@ import { ACCESS_TOKEN_ID } from '@shared/Constants';
 })
 export class MainComponent {
 
-  constructor(private router: Router) { }
+  drawerOpened: boolean;
 
-  logout(): void {
-    localStorage.removeItem(ACCESS_TOKEN_ID);
-    this.router.navigate([ '/login' ]);
+  constructor(
+    private readonly mainService: MainService
+  ) {
+    this.mainService.drawerOpenedSubject.subscribe(
+      drawerOpened => {
+      this.drawerOpened = drawerOpened;
+      }
+    );
   }
 
 }

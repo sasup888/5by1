@@ -1,0 +1,32 @@
+<header>
+  <div class="container">
+    <mat-toolbar class="toolbar">
+      <button (click)="toggleDrawer()" mat-icon-button aria-label="Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <div class="d-flex ml-auto">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+        <div class="profile">
+          <div class="avatar" [ngStyle]="{'background-image': 'url(https://images.pexels.com/photos/6437836/pexels-photo-6437836.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)'}"></div>
+          <p class="user">Prince Francis</p>
+        </div>
+        
+        <button primary mat-icon-button [matMenuTriggerFor]="menu" aria-label="Vertical menu">
+          <mat-icon>more_horiz</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button type="button" mat-menu-item (click)="logout()">
+            logout
+          </button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+  </div>
+  <mat-divider></mat-divider>
+</header>

@@ -1,1 +1,55 @@
-<p>dashboard works!</p>
+<div class="page-header">
+
+  <h3 class="title">Dashboard</h3>
+
+  <div>
+    <button mat-flat-button (click)="picker.open()" color="primary">
+      <mat-icon class="datepicker-icon">calendar_today</mat-icon>
+      {{range.value.start | date: 'd, MMMM, y' }} - {{range.value.end | date: 'd, MMMM, y' }}
+    </button>
+    <mat-date-range-input class="datepicker-input" [formGroup]="range" [rangePicker]="picker">
+      <input matStartDate formControlName="start" placeholder="Start date">
+      <input matEndDate formControlName="end" placeholder="End date">
+    </mat-date-range-input>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </div>
+</div>
+
+<mat-grid-list cols="3" gutterSize="40px" rowHeight="180px">
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title><mat-icon class="mr-4">calendar_today</mat-icon>Shiba Inu</mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title><mat-icon class="mr-4">calendar_today</mat-icon>Shiba Inu</mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title><mat-icon class="mr-4">calendar_today</mat-icon>Shiba Inu</mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

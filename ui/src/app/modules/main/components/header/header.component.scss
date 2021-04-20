@@ -1,0 +1,28 @@
+header {
+  background-color: #fff;
+}
+
+.toolbar {
+  background: transparent;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.user {
+  margin-bottom: 0;
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}

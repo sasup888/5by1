@@ -8,6 +8,14 @@ body { margin: 0; font-family: "Montserrat-Regular"; }
     display: flex;
 }
 
+.d-none {
+  display: none;
+}
+
+.d-none-i {
+  display: none !important;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -26,6 +34,10 @@ body { margin: 0; font-family: "Montserrat-Regular"; }
 
 .justify-content-end {
     justify-content: flex-end;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 @keyframes slide {
@@ -118,4 +130,83 @@ cursor: pointer;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-1 {
+  margin-left: 4px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.ml-3 {
+  margin-left: 12px;
+}
+
+.ml-4 {
+  margin-left: 16px;
+}
+
+.mr-1 {
+  margin-right: 4px;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.mr-3 {
+  margin-right: 12px;
+}
+
+.mr-4 {
+  margin-right: 16px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+}
+
+.card {
+  box-shadow: none !important;
+  border-radius: 8px;
+
+  .mat-card-header {
+    align-items: center;
+
+    .mat-card-title {
+      margin-bottom: 0;
+
+      .mat-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+      }
+    }
+  }
 }
