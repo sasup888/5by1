@@ -19,37 +19,69 @@
   <mat-grid-tile>
     <mat-card class="card w-100">
       <mat-card-header>
-        <mat-card-title><mat-icon class="mr-4">calendar_today</mat-icon>Shiba Inu</mat-card-title>
+        <mat-card-title>
+          <mat-icon color="primary" class="mr-4">attach_money</mat-icon>
+          Total income
+        </mat-card-title>
         <div class="ml-auto">
           <button mat-icon-button aria-label="Horizontal menu">
-            <mat-icon>more_horiz</mat-icon>
+            <mat-icon color="primary">more_horiz</mat-icon>
           </button>
         </div>
       </mat-card-header>
+      <mat-card-content class="mt-5">
+        <h3 class="mat-h3">$4,567</h3>
+        <div class="d-flex justify-content-between">
+          <span>Receivables</span>
+          <span>$0.00/$0.00</span>
+        </div>
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card class="card w-100">
       <mat-card-header>
-        <mat-card-title><mat-icon class="mr-4">calendar_today</mat-icon>Shiba Inu</mat-card-title>
+        <mat-card-title>
+          <mat-icon color="primary" class="mr-4">account_balance_wallet</mat-icon>
+          Total expenses
+        </mat-card-title>
         <div class="ml-auto">
           <button mat-icon-button aria-label="Horizontal menu">
-            <mat-icon>more_horiz</mat-icon>
+            <mat-icon color="primary">more_horiz</mat-icon>
           </button>
         </div>
       </mat-card-header>
+      <mat-card-content class="mt-5">
+        <h3 class="mat-h3">$4,567</h3>
+        <div class="d-flex justify-content-between">
+          <span>Payables</span>
+          <span>$0.00/$0.00</span>
+        </div>
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card class="card w-100">
       <mat-card-header>
-        <mat-card-title><mat-icon class="mr-4">calendar_today</mat-icon>Shiba Inu</mat-card-title>
+        <mat-card-title>
+          <mat-icon color="primary" class="mr-4">account_balance</mat-icon>
+          Total profit
+        </mat-card-title>
         <div class="ml-auto">
           <button mat-icon-button aria-label="Horizontal menu">
-            <mat-icon>more_horiz</mat-icon>
+            <mat-icon color="primary">more_horiz</mat-icon>
           </button>
         </div>
       </mat-card-header>
+      <mat-card-content class="mt-5">
+        <h3 class="mat-h3">$4,567</h3>
+        <div class="d-flex justify-content-between">
+          <span>Upcoming</span>
+          <span>$0.00/$0.00</span>
+        </div>
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
+
+<app-line-chart></app-line-chart>

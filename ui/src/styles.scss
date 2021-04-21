@@ -139,6 +139,83 @@ cursor: pointer;
   margin-right: auto;
 }
 
+$spaces: (
+  '0': 0,
+  '1': 4px,
+  '2': 8px,
+  '3': 12px,
+  '4': 16px,
+  '5': 20px,
+  '6': 24px,
+  '7': 28px,
+  '8': 32px,
+  '9': 36px,
+  '10': 40px,
+);
+
+@each $key-spaces, $val-spaces in $spaces {
+
+  .m-#{$key-spaces} {
+    margin: #{$val-spaces};
+  }
+
+  .mt-#{$key-spaces} {
+    margin-top: #{$val-spaces};
+  }
+
+  .mb-#{$key-spaces} {
+    margin-bottom: #{$val-spaces};
+  }
+
+  .ml-#{$key-spaces} {
+    margin-left: #{$val-spaces};
+  }
+
+  .my-#{$key-spaces} {
+    margin-top: #{$val-spaces};
+    margin-bottom: #{$val-spaces};
+  }
+
+  .mx-#{$key-spaces} {
+    margin-left: #{$val-spaces};
+    margin-right: #{$val-spaces};
+  }
+
+  .p-#{$key-spaces} {
+    padding: #{$val-spaces};
+  }
+
+  .pl-#{$key-spaces} {
+    padding-left: #{$val-spaces};
+  }
+
+  .pr-#{$key-spaces} {
+    padding-right: #{$val-spaces};
+  }
+
+  .pt-#{$key-spaces} {
+    padding-top: #{$val-spaces};
+  }
+
+  .pb-#{$key-spaces} {
+    padding-bottom: #{$val-spaces};
+  }
+
+  .px-#{$key-spaces} {
+    padding-left: #{$val-spaces};
+    padding-right: #{$val-spaces};
+  }
+
+  .py-#{$key-spaces} {
+    padding-top: #{$val-spaces};
+    padding-bottom: #{$val-spaces};
+  }
+}
+
+.m-auto {
+  margin: auto;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -147,36 +224,20 @@ cursor: pointer;
   margin-right: auto;
 }
 
-.ml-1 {
-  margin-left: 4px;
+.mt-auto {
+  margin-top: auto;
 }
 
-.ml-2 {
-  margin-left: 8px;
+.mb-auto {
+  margin-bottom: auto;
 }
 
-.ml-3 {
-  margin-left: 12px;
+.no-padding {
+  padding: 0;
 }
 
-.ml-4 {
-  margin-left: 16px;
-}
-
-.mr-1 {
-  margin-right: 4px;
-}
-
-.mr-2 {
-  margin-right: 8px;
-}
-
-.mr-3 {
-  margin-right: 12px;
-}
-
-.mr-4 {
-  margin-right: 16px;
+.no-margin {
+  margin: 0;
 }
 
 .page-header {
@@ -194,10 +255,15 @@ cursor: pointer;
 
 .card {
   box-shadow: none !important;
-  border-radius: 8px;
+  border-radius: 8px !important;
+  padding: 40px !important;
 
   .mat-card-header {
     align-items: center;
+
+    .mat-card-header-text {
+      margin-left: 0;
+    }
 
     .mat-card-title {
       margin-bottom: 0;
@@ -206,6 +272,9 @@ cursor: pointer;
         width: 20px;
         height: 20px;
         font-size: 20px;
+        background-color: #F2F7FF;
+        padding: 4px;
+        border-radius: 8px;
       }
     }
   }

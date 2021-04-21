@@ -45,3 +45,8 @@ $my-app-theme: mat-light-theme((
   )
 ));
 @include angular-material-theme($my-app-theme);
+
+$custom-typography: mat-typography-config(
+  $subheading-2: mat-typography-level(32px, 48px, 700),
+);
+@include mat-base-typography($custom-typography);

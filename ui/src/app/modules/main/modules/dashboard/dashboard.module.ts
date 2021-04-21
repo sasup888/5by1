@@ -8,12 +8,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, LineChartComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -25,7 +27,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     MatFormFieldModule,
     MatIconModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    NgxChartsModule
   ]
 })
 export class DashboardModule { }

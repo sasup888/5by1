@@ -2,7 +2,7 @@
   <div class="container">
     <mat-toolbar class="toolbar">
       <button (click)="toggleDrawer()" mat-icon-button aria-label="Menu">
-        <mat-icon>menu</mat-icon>
+        <mat-icon color="primary">menu</mat-icon>
       </button>
       
       <div class="d-flex ml-auto">
@@ -18,7 +18,7 @@
         </div>
         
         <button primary mat-icon-button [matMenuTriggerFor]="menu" aria-label="Vertical menu">
-          <mat-icon>more_horiz</mat-icon>
+          <mat-icon color="primary">more_horiz</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
           <button type="button" mat-menu-item (click)="logout()">

@@ -10,7 +10,7 @@ export function drawerConfigFactory(): DrawerConfigItem[] {
     {
       path: 'dashboard',
       label: 'Dashboard',
-      icon: 'view_sidebar'
+      icon: 'space_dashboard'
     },
     {
       path: 'items',
