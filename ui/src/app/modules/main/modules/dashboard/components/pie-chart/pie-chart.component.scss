@@ -1,0 +1,19 @@
+:host ::ng-deep .chart {
+  .ngx-charts {
+    transform: translateX(calc(-50% + 72px));
+  }
+
+  .chart-legend  {
+    transform: translate(-320px, calc(90px - 50%));
+  }
+
+  .legend-labels {
+    background-color: transparent;
+
+    .legend-label-text {
+      color: rgba(#1E3354, .8);
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+}

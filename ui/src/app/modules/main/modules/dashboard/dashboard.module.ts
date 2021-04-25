@@ -13,9 +13,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 
 @NgModule({
-  declarations: [DashboardComponent, LineChartComponent],
+  declarations: [DashboardComponent, LineChartComponent, PieChartComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

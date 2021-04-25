@@ -267,14 +267,43 @@ $spaces: (
 
     .mat-card-title {
       margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      color: rgba(#1E3354, .8);
+      font-size: 16px;
+      font-weight: 600;
 
       .mat-icon {
+        margin-right: 10px;
         width: 20px;
         height: 20px;
         font-size: 20px;
         background-color: #F2F7FF;
         padding: 4px;
         border-radius: 8px;
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-right: 50px;
+
+      .title {
+        font-size: 10px;
+        color: rgba(#1E3354, .8);
+        margin-bottom: 0;
+      }
+
+      .text {
+        font-size: 13px;
+        color: #1E3354;
+        margin-bottom: 0;
+        font-weight: 600;
       }
     }
   }

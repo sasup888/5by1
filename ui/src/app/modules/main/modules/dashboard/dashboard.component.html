@@ -85,3 +85,129 @@
 </mat-grid-list>
 
 <app-line-chart></app-line-chart>
+
+<mat-grid-list class="mt-10" cols="2" gutterSize="40px" rowHeight="265">
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title>
+          Income by category
+        </mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon color="primary">more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="mt-5">
+        <app-pie-chart></app-pie-chart>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon color="primary" class="mr-4">attach_money</mat-icon>
+          Expenses by category
+        </mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon color="primary">more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="mt-5">
+        <app-pie-chart></app-pie-chart>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list class="mt-10" cols="3" gutterSize="40px" rowHeight="180px">
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon color="primary" class="mr-4">account_balance</mat-icon>
+          Account balance
+        </mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon color="primary">more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="mt-5">
+        <ul class="list">
+          <li>
+            <p class="title">Balance</p>
+            <p class="text">$14,567</p>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon color="primary" class="mr-4">attach_money</mat-icon>
+          Latest income
+        </mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon color="primary">more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="mt-5">
+        <ul class="list">
+          <li>
+            <p class="title">Date</p>
+            <p class="text">01 April, 2021</p>
+          </li>
+          <li>
+            <p class="title">Category</p>
+            <p class="text">Deposit</p>
+          </li>
+          <li>
+            <p class="title">Amount</p>
+            <p class="text">$14,567</p>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="card w-100">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon color="primary" class="mr-4">account_balance_wallet</mat-icon>
+          Latest expenses
+        </mat-card-title>
+        <div class="ml-auto">
+          <button mat-icon-button aria-label="Horizontal menu">
+            <mat-icon color="primary">more_horiz</mat-icon>
+          </button>
+        </div>
+      </mat-card-header>
+      <mat-card-content class="mt-5">
+        <ul class="list">
+          <li>
+            <p class="title">Date</p>
+            <p class="text">01 April, 2021</p>
+          </li>
+          <li>
+            <p class="title">Category</p>
+            <p class="text">Deposit</p>
+          </li>
+          <li>
+            <p class="title">Amount</p>
+            <p class="text">$14,567</p>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
