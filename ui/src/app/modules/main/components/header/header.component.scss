@@ -1,15 +1,18 @@
 header {
   background-color: #fff;
-}
-
-.toolbar {
-  background: transparent;
+  
+  .toolbar {
+    height: 78px;
+    padding: 18px 0;
+    background: transparent;
+  }
 }
 
 .profile {
   display: flex;
   align-items: center;
   margin-right: 12px;
+  margin-left: 24px;
 }
 
 .user {
@@ -25,4 +28,25 @@ header {
   background-position: center;
   background-size: cover;
   display: inline-block;
+}
+
+::ng-deep {
+  mat-form-field.mat-form-field {
+    font-size: 12px;
+  }
+
+  .header-search {
+    margin-left: 24px;
+
+    .mat-form-field-wrapper {
+      width: 765px !important;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .mat-form-field-label {
+      font-weight: 500;
+      color: rgba(#1E3354, .5);
+    }
+  }
 }

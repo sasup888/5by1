@@ -8,11 +8,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { HeaderComponent } from './components/header/header.component';
     MatButtonModule,
     MatDividerModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MainModule { }
