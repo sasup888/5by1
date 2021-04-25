@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ColorHelper } from '@swimlane/ngx-charts';
 
 const data = [
   {
@@ -97,14 +98,10 @@ const data = [
   styleUrls: ['./line-chart.component.scss']
 })
 export class LineChartComponent {
-
-  data = data;
-  view: number[] = [undefined, 250];
-
-  // options
-  showLabels: boolean = false;
-
   colorScheme = {
     domain: ['#1E3354', '#0062FF', '#CFDFFE']
   };
+  data = data;
+  legendNames = this.data.map(d => d.name);
+  legendColors = new ColorHelper(this.colorScheme, 'ordinal', this.legendNames, this.colorScheme);
 }

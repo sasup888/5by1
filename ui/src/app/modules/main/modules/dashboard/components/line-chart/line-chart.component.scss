@@ -1,0 +1,21 @@
+:host ::ng-deep {
+  .chart {
+    .ngx-charts {
+      float: none;
+    }
+  }
+
+  .chart-legend {
+    .legend-labels {
+      background-color: transparent;
+  
+      .legend-label-text {
+        color: rgba(#1E3354, .8);
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  
+}
