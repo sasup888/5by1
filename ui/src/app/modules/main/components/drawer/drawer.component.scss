@@ -1,0 +1,28 @@
+.logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  img {
+    display: block;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+:host::ng-deep {
+  .mat-list-base {
+    .mat-list-item {
+      color: #fff;
+      border-radius: 8px;
+
+      &.active {
+        background-color: #0062FF;
+
+        .mat-icon {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

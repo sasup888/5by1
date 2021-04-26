@@ -1,5 +1,7 @@
+<div class="logo">
+  <img src="/assets/images/logo/logo.svg" />
+</div>
+
 <mat-nav-list>
-  <a routerLinkActive="asd" mat-list-item *ngFor="let configItem of drawerConfig" [routerLink]="configItem.path">
-    <mat-icon mat-list-icon aria-hidden="false" [ariaLabel]="configItem.label">{{configItem.icon}}</mat-icon> {{configItem.label}}
-  </a>
- </mat-nav-list>
+  <app-drawer-item *ngFor="let configItem of drawerConfig" [configItem]="configItem"></app-drawer-item>
+</mat-nav-list>

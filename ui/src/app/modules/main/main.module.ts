@@ -15,12 +15,14 @@ import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DrawerItemComponent } from './components/drawer/drawer-item/drawer-item.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     DrawerComponent,
     HeaderComponent,
+    DrawerItemComponent,
   ],
   imports: [
     CommonModule,

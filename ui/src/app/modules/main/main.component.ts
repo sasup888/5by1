@@ -9,7 +9,7 @@ import { MainService } from './services/main.service';
 })
 export class MainComponent {
   mobileQuery: MediaQueryList;
-  drawerOpened: boolean;
+  drawerOpened = false;
 
   private _mobileQueryListener: () => void;
 
