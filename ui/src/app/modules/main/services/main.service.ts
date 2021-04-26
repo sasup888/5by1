@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class MainService {
 
-  drawerOpenedSubject = new BehaviorSubject(true);
+  drawerOpenedSubject = new BehaviorSubject(false);
 
   toggleDrawer(): void {
     this.drawerOpenedSubject.next(!this.drawerOpenedSubject.value);

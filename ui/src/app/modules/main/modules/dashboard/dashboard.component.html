@@ -15,7 +15,7 @@
   </div>
 </div>
 
-<mat-grid-list cols="3" gutterSize="40px" rowHeight="180px">
+<mat-grid-list [cols]="gridLayout.totalScores" [gutterSize]="gridLayout.gutter" rowHeight="180px">
   <mat-grid-tile>
     <mat-card class="card w-100">
       <mat-card-header>
@@ -86,7 +86,7 @@
 
 <app-line-chart></app-line-chart>
 
-<mat-grid-list class="mt-10" cols="2" gutterSize="40px" rowHeight="265">
+<mat-grid-list class="mt-10" [cols]="gridLayout.pieCharts" [gutterSize]="gridLayout.gutter" rowHeight="265">
   <mat-grid-tile>
     <mat-card class="card w-100">
       <mat-card-header>
@@ -123,7 +123,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list class="mt-10" cols="3" gutterSize="40px" rowHeight="180px">
+<mat-grid-list class="mt-10" [cols]="gridLayout.scores" [gutterSize]="gridLayout.gutter" rowHeight="180px">
   <mat-grid-tile>
     <mat-card class="card w-100">
       <mat-card-header>

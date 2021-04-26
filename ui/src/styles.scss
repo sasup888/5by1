@@ -137,6 +137,11 @@ cursor: pointer;
   padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 $spaces: (
@@ -258,6 +263,10 @@ $spaces: (
   border-radius: 8px !important;
   padding: 40px !important;
 
+  @media screen and (max-width: 768px) {
+    padding: 20px !important;
+  }
+
   .mat-card-header {
     align-items: center;
 
@@ -307,4 +316,7 @@ $spaces: (
       }
     }
   }
+}
+.relative {
+  position: relative;
 }

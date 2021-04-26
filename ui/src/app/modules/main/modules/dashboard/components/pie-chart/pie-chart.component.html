@@ -1,12 +1,14 @@
-<ngx-charts-pie-chart
-  class="chart"
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="data"
-  [gradient]="true"
-  [legend]="true"
-  [legendPosition]="'right'"
-  [tooltipDisabled]="true"
-  legendTitle=""
+
+<div #containerRef class="relative">
+  <ngx-charts-pie-chart
+    class="chart"
+    [view]="[containerRef.offsetWidth - 20, 180]"
+    [scheme]="colorScheme"
+    [results]="data"
+    [gradient]="true"
+    [legend]="false"
+    [tooltipDisabled]="true"
   >
-</ngx-charts-pie-chart>
+  </ngx-charts-pie-chart>
+  <ngx-charts-legend class="chart-legend" [title]="" [data]="legendNames" [colors]="legendColors"></ngx-charts-legend>
+</div>

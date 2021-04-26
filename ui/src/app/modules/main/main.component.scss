@@ -11,8 +11,36 @@
   left: 0;
   right: 0;
   background: #FBFBFB;
+
+  &.mobile {
+    top: 78px;
+  }
+}
+
+::ng-deep {
+  mat-drawer {
+    &:hover {
+      width: 260px;
+    }
+
+    &.opened {
+      width: 260px;
+    }
+
+    .closed {
+      width: 94px;
+    }
+  }
 }
 
 .main-content {
   padding-top: 40px;
+}
+
+::ng-deep {
+  .sidenav:not(.mat-drawer-opened) {
+    width: 94px !important;
+    transform: translate3d(0, 0, 0) !important;
+    visibility: visible !important;
+  }
 }

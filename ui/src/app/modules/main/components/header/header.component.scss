@@ -19,6 +19,10 @@ header {
   margin-bottom: 0;
   font-size: 16px;
   margin-left: 16px;
+
+  @media screen and(max-width: 768px) {
+    display: none;
+  }
 }
 
 .avatar {
@@ -37,9 +41,19 @@ header {
 
   .header-search {
     margin-left: 24px;
+    margin-right: 24px;
+    flex-grow: 1;
+
+    @media screen and(max-width: 1024px) {
+      display: none;   
+    }
+
+    .mat-form-field  {
+      width: 100%;
+      max-width: 765px;
+    }
 
     .mat-form-field-wrapper {
-      width: 765px !important;
       margin-bottom: 0;
       padding-bottom: 0;
     }

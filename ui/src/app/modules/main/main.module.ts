@@ -9,18 +9,18 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
     MainComponent,
     DrawerComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     CommonModule,

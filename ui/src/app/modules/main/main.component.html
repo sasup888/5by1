@@ -1,10 +1,9 @@
-<!-- <p class="home">Welcome To Home!. logout <u><a (click)="logout()">Here</a></u></p> -->
-
-<mat-drawer-container class="main-container">
-  <mat-drawer [opened]="drawerOpened" #drawer class="sidenav" mode="side">
+<app-header *ngIf="mobileQuery.matches"></app-header>
+<mat-drawer-container autosize class="main-container" [ngClass]="{'mobile': mobileQuery.matches}">
+  <mat-drawer opened #drawer class="sidenav" [ngClass]="drawerOpened ? 'opened' : 'closed'" [mode]="mobileQuery.matches ? 'over' : 'side'">
     <app-drawer></app-drawer>
   </mat-drawer>
-  <app-header></app-header>
+  <app-header *ngIf="!mobileQuery.matches"></app-header>
   <div class="main-content">
     <div class="container">
       <router-outlet></router-outlet>
