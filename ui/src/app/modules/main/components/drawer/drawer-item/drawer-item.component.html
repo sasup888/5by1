@@ -1,5 +1,5 @@
 <a [routerLinkActive]="['active']" (click)="onItemSelected(configItem)" mat-list-item color="white" [routerLink]="configItem.path">
-  <mat-icon color="primary" mat-list-icon aria-hidden="false" [ariaLabel]="configItem.label">{{configItem.icon}}</mat-icon> <span class="text">{{configItem.label}}</span>
+  <mat-icon color="primary" mat-list-icon aria-hidden="false" [attr.aria-label]="configItem.label">{{configItem.icon}}</mat-icon> <span class="text">{{configItem.label}}</span>
   <span class="ml-auto expand" *ngIf="configItem.children && configItem.children.length">
     <span></span>
     <mat-icon color="primary">
