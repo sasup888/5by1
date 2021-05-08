@@ -5,8 +5,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Subscription } from 'rxjs';
 
 enum CustomBreakPoints {
-  LG = '(max-width: 1690px)',
-  MD = '(max-width: 1200px)',
+  LG = '(max-width: 1200px)',
+  MD = '(max-width: 1024px)',
   SM = '(max-width: 768px)'
 }
 
@@ -72,7 +72,4 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.$subscription.unsubscribe();
     }
   }
-
-
-
 }

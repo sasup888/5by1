@@ -1,8 +1,7 @@
-
-<div #containerRef class="relative">
+<div class="relative" >
   <ngx-charts-pie-chart
     class="chart"
-    [view]="[containerRef.offsetWidth - 20, 180]"
+    [view]="[chartWidth, chartHeight]"
     [scheme]="colorScheme"
     [results]="data"
     [gradient]="true"

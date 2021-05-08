@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ColorHelper } from '@swimlane/ngx-charts';
+import { ResizedEvent } from 'angular-resize-event';
 
 const data = [
   {
@@ -95,13 +96,20 @@ const data = [
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.scss']
+  styleUrls: ['./line-chart.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LineChartComponent {
+export class LineChartsComponent {
   colorScheme = {
     domain: ['#1E3354', '#0062FF', '#CFDFFE']
   };
   data = data;
   legendNames = this.data.map(d => d.name);
   legendColors = new ColorHelper(this.colorScheme, 'ordinal', this.legendNames, this.colorScheme);
+  chartHeight = 300;
+  view = [undefined, this.chartHeight];
+
+  onResized(event: ResizedEvent): void {
+    this.view = [event.newWidth, this.chartHeight];
+  }
 }

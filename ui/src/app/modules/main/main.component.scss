@@ -19,7 +19,7 @@
 
 :host::ng-deep {
 
-  .mat-drawer-backdrop.mat-drawer-shown {
+  .mat-drawer-backdrop {
     background-color: rgba(#12284B, .5);
   }
   
@@ -44,9 +44,15 @@
       }
   
       &.closed {
-        .mat-drawer-backdrop.mat-drawer-shown {
+        .mat-drawer-backdrop {
           visibility: hidden;
           background-color: transparent;
+        }
+      }
+
+      &.opened {
+        .mat-drawer-backdrop {
+          visibility: visible;
         }
       }
     }
@@ -61,7 +67,7 @@
     padding: 0 15px;
     
     &.opened {
-      width: 260px;
+      width: 260px !important;
     }
 
     &.closed {

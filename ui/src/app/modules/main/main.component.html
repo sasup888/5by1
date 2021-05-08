@@ -1,6 +1,6 @@
 <app-header *ngIf="mobileQuery.matches"></app-header>
 <mat-drawer-container autosize class="main-container" [ngClass]="{'mobile': mobileQuery.matches, 'opened': drawerOpened, 'closed': !drawerOpened}">
-  <mat-drawer opened #drawer class="sidenav" [ngClass]="drawerOpened ? 'opened' : 'closed'" [mode]="mobileQuery.matches ? 'over' : 'side'">
+  <mat-drawer (closed)="onClose()" [opened]="mobileQuery.matches ? drawerOpened : true" #drawer class="sidenav" [ngClass]="drawerOpened ? 'opened' : 'closed'" [mode]="mobileQuery.matches ? 'over' : 'side'">
     <app-drawer></app-drawer>
   </mat-drawer>
   <app-header *ngIf="!mobileQuery.matches"></app-header>

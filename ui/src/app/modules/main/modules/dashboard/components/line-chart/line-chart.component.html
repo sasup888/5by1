@@ -1,35 +1,31 @@
-
-
-  <mat-card class="card  mt-10">
-    <mat-card-header>
-      <mat-card-title>
-        Cash flow
-      </mat-card-title>
-      <div class="ml-auto d-flex align-items-center">
-        <ngx-charts-legend [horizontal]="true" [width]="250"  class="chart-legend" [title]="" [data]="legendNames" [colors]="legendColors"></ngx-charts-legend>
-        <button mat-icon-button aria-label="Horizontal menu">
-          <mat-icon color="primary">more_horiz</mat-icon>
-        </button>
-      </div>
-    </mat-card-header>
-    <mat-card-content class="mt-5">
-      <div class="chart" #ContainerRef>
-        <ngx-charts-line-chart
-          [view]="[ContainerRef.offsetWidth, 200]"
-          [scheme]="colorScheme"
-          [legend]="false"
-          [legendPosition]="'below'"
-          [showXAxisLabel]="false"
-          [showYAxisLabel]="false"
-          [xAxis]="true"
-          [yAxis]="true"
-          [timeline]="false"
-          [results]="data"
-          [animations]="true"
-        >
-      </ngx-charts-line-chart>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-
+<mat-card class="card  mt-10">
+  <mat-card-header>
+    <mat-card-title>
+      Cash flow
+    </mat-card-title>
+    <div class="ml-auto d-flex align-items-center">
+      <ngx-charts-legend [horizontal]="true" [width]="250"  class="chart-legend" [title]="" [data]="legendNames" [colors]="legendColors"></ngx-charts-legend>
+      <button mat-icon-button aria-label="Horizontal menu">
+        <mat-icon color="primary">more_horiz</mat-icon>
+      </button>
+    </div>
+  </mat-card-header>
+  <mat-card-content class="mt-5">
+    <div class="chart" (resized)="onResized($event)">
+      <ngx-charts-line-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [legend]="false"
+        [legendPosition]="'below'"
+        [showXAxisLabel]="false"
+        [showYAxisLabel]="false"
+        [xAxis]="true"
+        [yAxis]="true"
+        [timeline]="false"
+        [results]="data"
+        [animations]="true"
+      >
+    </ngx-charts-line-chart>
+    </div>
+  </mat-card-content>
+</mat-card>

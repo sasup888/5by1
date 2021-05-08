@@ -1,5 +1,5 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 
 import { MainService } from './services/main.service';
 @Component({
@@ -7,7 +7,7 @@ import { MainService } from './services/main.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
   drawerOpened = false;
 
@@ -30,6 +30,10 @@ export class MainComponent {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  onClose(): void {
+    this.mainService.drawerOpenedSubject.next(false);
   }
 
 }

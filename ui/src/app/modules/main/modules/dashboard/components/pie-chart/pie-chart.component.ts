@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ColorHelper } from '@swimlane/ngx-charts';
+import { ResizedEvent } from 'angular-resize-event';
 
 @Component({
   selector: 'app-pie-chart',
@@ -26,5 +27,7 @@ export class PieChartComponent {
 
   legendNames = this.data.map(d => d.name);
   legendColors = new ColorHelper(this.colorScheme, 'ordinal', this.legendNames, this.colorScheme);
+  chartHeight = 180;
+  chartWidth = 180;
 
 }
